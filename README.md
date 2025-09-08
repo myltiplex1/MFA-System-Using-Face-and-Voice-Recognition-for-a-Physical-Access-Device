@@ -1,6 +1,6 @@
 # MFA Device — Face + Voice Multi-Factor Authentication
 
-A multi-factor authentication (MFA) Device combining face and voice recognition, designed to run on an NVIDIA Jetson Nano. The system requires both facial recognition and voice verification before granting physical access. It is intended for secure spaces such as labs, offices, and data centers.
+A multi-factor authentication (MFA) device combining face and voice recognition, designed to run on an NVIDIA Jetson Nano. The device requires both facial recognition and voice verification before granting physical access. It is intended for secure spaces such as labs, offices, and data centers.
 
 ---
 
@@ -18,7 +18,7 @@ A multi-factor authentication (MFA) Device combining face and voice recognition,
 ---
 
 ## 📂 Project structure (summary)
-- `main.py` — Main entry point / system orchestration  
+- `main.py` — Main entry point / device orchestration  
 - `train_faces.py` — Train and save face embeddings
 - `pir_capture.py` — Motion detection and image capture  
 - `display_utils.py` — TFT display initialization & text rendering  
@@ -43,9 +43,9 @@ python train_faces.py
 ```
 
 ## ⚙️ Software prerequisites (Jetson Nano)
-- Python 3.6+ (or system Python compatible with Jetson packages)
+- Python 3.6+ (or Python compatible with Jetson packages)
 - face-recognition (requires dlib — install Jetson-compatible build)
-- System packages (install on Jetson Nano):
+- Packages (install on Jetson Nano):
   - cmake
   - gfortran
   - libopenblas-dev
@@ -130,7 +130,7 @@ Flow:
 
 ## 🔒 Expected impact
 
-This system strengthens security where single-factor authentication is insufficient.
+This device strengthens security where single-factor authentication is insufficient.
 
 Applications:
 - Banks and financial institutions
