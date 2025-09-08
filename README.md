@@ -1,6 +1,6 @@
 # MFA Device — Face + Voice Multi-Factor Authentication
 
-A multi-factor authentication (MFA) system combining face and voice recognition, designed to run on an NVIDIA Jetson Nano. The system requires both facial recognition and voice verification before granting physical access. It is intended for secure spaces such as labs, offices, and data centers.
+A multi-factor authentication (MFA) Device combining face and voice recognition, designed to run on an NVIDIA Jetson Nano. The system requires both facial recognition and voice verification before granting physical access. It is intended for secure spaces such as labs, offices, and data centers.
 
 ---
 
