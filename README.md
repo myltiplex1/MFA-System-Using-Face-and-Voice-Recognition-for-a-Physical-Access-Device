@@ -4,6 +4,10 @@ A multi-factor authentication (MFA) device combining face and voice recognition,
 
 ---
 
+## Demo video
+
+Watch the project demo on Vimeo: [MFA](https://vimeo.com/1116588015?share=copy)
+
 ## 🚀 Features
 - Face recognition using a CSI or USB camera.
 - Voice authentication using mel-spectrograms and a ResNet ONNX model.
