@@ -36,11 +36,43 @@ A multi-factor authentication (MFA) device combining face and voice recognition,
 
 ### Train Face Recognition Model
 - Place images of known people inside the `known/` folder
-Run training script:
+- Train a face recognition model and save it as `face_model.pkl`.
 
 ```bash
 python train_faces.py
 ```
+### Train / Use Voice Recognition Model
+- Prepare dataset of spoken keywords or passphrases recording audio:
+
+```bash
+python audio.py
+```
+- Convert audio into spectrograms:
+
+```bash
+python audio_spec.py
+```
+- Train a ResNet model (export as .onnx)
+- Save the model and labels in: 
+    `model/voice/resnet.onnx`
+    `model/voice/labels.txt`
+- Classifies with:
+
+```bash
+python audio_pred.py
+```
+### Configure Serial Communication
+- ESP8266 listens for the Open command over serial.
+- When access is granted: Jetson -> ESP8266: Open ESP8266 drives servo -> unlocks door ESP8266 -> Jetson: Closed when door is relocked
+- Set the correct port in main.py:
+
+```bash
+import serial
+ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=10)
+```
+#### Notes:
+- Replace /dev/ttyUSB0 with your actual serial port. On Windows this will be a COM port (for example COM3).
+- Ensure the baud rate and timeout match the ESP8266's configuration.
 
 ## ⚙️ Software prerequisites (Jetson Nano)
 - Python 3.6+ (or Python compatible with Jetson packages)
