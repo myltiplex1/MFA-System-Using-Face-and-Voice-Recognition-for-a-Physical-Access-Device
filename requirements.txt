@@ -1,0 +1,4 @@
+opencv
+numpy
+Pillow
+jetson_inference
