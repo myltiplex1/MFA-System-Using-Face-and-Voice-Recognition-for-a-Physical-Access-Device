@@ -2,3 +2,6 @@ opencv
 numpy
 Pillow
 jetson_inference
+scikit-learn
+PyTorch / ONNX Runtime
+PySerial
