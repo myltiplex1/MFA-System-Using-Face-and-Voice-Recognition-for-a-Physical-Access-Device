@@ -34,14 +34,14 @@ A multi-factor authentication (MFA) device combining face and voice recognition,
 
 ## 🔧 Setup & Training
 
-### Train Face Recognition Model
+### 1. Train Face Recognition Model
 - Place images of known people inside the `known/` folder
 - Train a face recognition model and save it as `face_model.pkl`.
 
 ```bash
 python train_faces.py
 ```
-### Train / Use Voice Recognition Model
+### 2. Train / Use Voice Recognition Model
 - Prepare dataset of spoken keywords or passphrases recording audio:
 
 ```bash
@@ -61,7 +61,7 @@ python audio_spec.py
 ```bash
 python audio_pred.py
 ```
-### Configure Serial Communication
+### 3. Configure Serial Communication
 - ESP8266 listens for the Open command over serial.
 - When access is granted: Jetson -> ESP8266: Open ESP8266 drives servo -> unlocks door ESP8266 -> Jetson: Closed when door is relocked
 - Set the correct port in main.py:
