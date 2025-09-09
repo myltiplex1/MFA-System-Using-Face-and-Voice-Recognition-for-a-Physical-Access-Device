@@ -32,7 +32,7 @@ A multi-factor authentication (MFA) device combining face and voice recognition,
 - `servo_serial.py` - test face recognition + servo serial communication
 ---
 
-🔧 ## Setup & Training
+## 🔧 Setup & Training
 
 ### Train Face Recognition Model
 - Place images of known people inside the `known/` folder
